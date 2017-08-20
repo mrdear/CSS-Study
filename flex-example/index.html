@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>筛子布局</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="flex-box">
+    <!--左上-->
+    <div class="box" style="justify-content: flex-start">
+        <span class="item"></span>
+    </div>
+    <!--右上-->
+    <div class="box" style="justify-content: flex-end">
+        <span class="item"></span>
+    </div>
+    <!--中间上-->
+    <div class="box" style="justify-content: center">
+        <span class="item"></span>
+    </div>
+    <!--中间中-->
+    <div class="box" style="justify-content: center;align-items: center">
+        <span class="item"></span>
+    </div>
+    <!--中间下-->
+    <div class="box" style="justify-content: center;align-items: flex-end">
+        <span class="item"></span>
+    </div>
+    <!--左下-->
+    <div class="box" style="align-items: flex-end">
+        <span class="item"></span>
+    </div>
+    <!--右下-->
+    <div class="box" style="justify-content: flex-end;align-items: flex-end">
+        <span class="item"></span>
+    </div>
+</div>
+
+<!--两个-->
+<div class="flex-box">
+
+    <div class="box" style="justify-content: flex-start">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+
+    <div class="box" style="justify-content: space-between;">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+    <div class="box" style="justify-content: space-between;">
+        <span class="item"></span>
+        <span class="item" style="align-self: flex-end"></span>
+    </div>
+    <div class="box" style="justify-content: space-between;align-items: flex-end">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+    <div class="box" style="justify-content: space-between;align-items: center">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+    <div class="box" style="justify-content: space-between;align-items: center">
+        <span class="item" style="align-self: flex-start"></span>
+        <span class="item"></span>
+    </div>
+    <div class="box" style="justify-content: flex-end;align-items: center">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+</div>
+<!--三个-->
+<div class="flex-box">
+    <div class="box" >
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+    <div class="box" >
+        <span class="item" style="align-self: flex-end"></span>
+        <span class="item" style="align-self: center"></span>
+        <span class="item"></span>
+    </div>
+    <div class="box" >
+        <span class="item"></span>
+        <span class="item" style="align-self: center"></span>
+        <span class="item" style="align-self: flex-end"></span>
+    </div>
+</div>
+<!--四个-->
+<div class="flex-box">
+    <div class="box" style="flex-wrap: wrap;align-content: space-between">
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+    <div class="box" style="flex-wrap: wrap;align-content: space-between;justify-content: flex-end">
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+    <div class="box" style="flex-wrap: wrap;align-content: space-between;justify-content: flex-end">
+        <div style="display: flex;flex-basis: 100%;justify-content: space-between">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+        <div style="display: flex;flex-basis: 100%;justify-content: space-between">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+    </div>
+    <div class="box" style="flex-wrap: wrap;align-content: space-between;justify-content: flex-end">
+        <div style="display: flex;flex-basis: 100%;justify-content: space-between">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+        <div style="display: flex;flex-basis: 100%;justify-content: center;">
+            <span class="item"></span>
+        </div>
+        <div style="display: flex;flex-basis: 100%;justify-content: space-between">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

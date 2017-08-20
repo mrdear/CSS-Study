@@ -1,0 +1,33 @@
+
+/*关于flex布局,阮一峰大神的文章写得非常好,建议学习阅读
+http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+http://www.ruanyifeng.com/blog/2015/07/flex-examples.html
+*/
+
+body{
+    margin: 20px 100px;
+    background-color: gray;
+
+}
+.flex-box{
+    display: flex;
+    justify-content: center;
+}
+
+
+.box{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: snow;
+    margin: 5px 20px;
+}
+
+.item{
+    border-radius: 50%;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    margin: 8px 8px;
+}
