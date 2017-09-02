@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>文本单行多行显示省略号</title>
+    <style>
+        .single{
+            width: 100px;
+            border: 1px solid red;
+        }
+        .single p{
+            position: relative;
+            /*保证单行*/
+            line-height: 20px;
+            height: 20px;
+            overflow: hidden;
+        }
+        .single p::after{
+            content:"...";
+            position:absolute;
+            bottom:0;
+            right:0;
+            padding: 0 5px;
+            background-color: #fff;
+        }
+
+        .multi{
+            width: 100px;
+            border: 1px solid black;
+        }
+        .multi p{
+            position: relative;
+            /*保证5行*/
+            line-height: 20px;
+            height: 100px;
+            overflow: hidden;
+        }
+        .multi p::after{
+            content:"...";
+            position:absolute;
+            bottom:0;
+            right:0;
+            padding: 0 5px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="single">
+    <p>
+        hahahhahhahahhahjsdqjkljdowq函数该还是你新标签不错吧d
+    </p>
+</div>
+<br/>
+<div class="multi">
+    <p>
+        hahahhahhahahhahjsdqjkljdowq函数该还是你新标签不错吧dhahahhahhahahhahjsdqjkljdowq函数该还是你新标签不错吧dhahahhahhahahhahjsdqjkljdowq吧dhahahhahhahahhahjsdqjkljdowq函数该还是你新标签不错吧d
+    </p>
+</div>
+
+</body>
+</html>
