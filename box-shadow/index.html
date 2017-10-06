@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<!--阴影就相当于当前元素的副本,然后x与y坐标是控制该副本的位移,blur则是控制该阴影的模糊半径-->
+
+<body style="width: 100vw">
+
+<div class="box" style="box-shadow: 0 0 10px red">
+    <span>四周发光</span>
+</div>
+
+<div class="box" style="box-shadow: -5px 0 2px red">
+    <span>左边发光</span>
+</div>
+
+<div class="box" style="box-shadow: -5px 0 2px red,0 0 0 red,5px 0 2px red,0 0 0 red">
+    <span>两侧发光</span>
+</div>
+
+
+<div class="box" style="box-shadow: 0 0 10px red inset">
+    <span>内-四周发光</span>
+</div>
+
+<div class="box" style="box-shadow: 5px 0 2px red inset">
+    <span>内-左边发光</span>
+</div>
+
+<div class="box" style="box-shadow: 5px 0 2px red inset,0 0 0 red,-5px 0 2px red inset,0 0 0 red">
+    <span>内-两侧发光</span>
+</div>
+
+
+</body>
+</html>

@@ -4,45 +4,47 @@
     <meta charset="UTF-8">
     <title>文本单行多行显示省略号</title>
     <style>
+        div{
+            margin: 0 auto;
+        }
         .single{
-            width: 100px;
+            width: 300px;
             border: 1px solid red;
         }
         .single p{
             position: relative;
+            font-size: 20px;
             /*保证单行*/
             line-height: 20px;
             height: 20px;
             overflow: hidden;
-        }
-        .single p::after{
-            content:"...";
-            position:absolute;
-            bottom:0;
-            right:0;
-            padding: 0 5px;
-            background-color: #fff;
+            /*以下两个一起才能保证有省略号*/
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
         .multi{
-            width: 100px;
+            width: 300px;
             border: 1px solid black;
         }
         .multi p{
-            position: relative;
-            /*保证5行*/
-            line-height: 20px;
-            height: 100px;
             overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3; /* 控制显示的行数 */
+            line-height: 20px;        /* 对不支持浏览器的 */
+            max-height: 60px;       /* 对不支持浏览器的弥补 */
         }
-        .multi p::after{
-            content:"...";
-            position:absolute;
-            bottom:0;
-            right:0;
-            padding: 0 5px;
-            background-color: #fff;
-        }
+        /*.multi p::after{*/
+            /*content:"...";*/
+            /*position:absolute;*/
+            /*bottom:0;*/
+            /*right: 0;*/
+            /*left: auto;*/
+            /*padding: 0 2px;*/
+            /*background-color: #fff;*/
+        /*}*/
     </style>
 </head>
 <body>
@@ -55,7 +57,7 @@
 <br/>
 <div class="multi">
     <p>
-        hahahhahhahahhahjsdqjkljdowq函数该还是你新标签不错吧dhahahhahhahahhahjsdqjkljdowq函数该还是你新标签不错吧dhahahhahhahahhahjsdqjkljdowq吧dhahahhahhahahhahjsdqjkljdowq函数该还是你新标签不错吧d
+        函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧
     </p>
 </div>
 
