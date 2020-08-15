@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>文本单行多行显示省略号</title>
+
+    <style>
+        p {
+            width: 100px;
+            height: 40px;
+            border: 1px solid red;
+            position: relative;
+        }
+
+        p::after {
+            content: "...";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: auto;
+            padding: 0 2px;
+            background-color: #fff;
+        }
+    </style>
+
+</head>
+<body>
+
+<p style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">hahahhahhahahhahjsdqjkljdowq函数该还是你新标签不错吧d</p>
+
+<br/>
+
+<p style="text-overflow: ellipsis;overflow: hidden; line-height: 20px; max-height: 40px">
+    函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧,函数该还是你签不错吧
+</p>
+
+</body>
+</html>
