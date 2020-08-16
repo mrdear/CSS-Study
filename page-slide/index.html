@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面平滑滑动</title>
+    <style>
+        a, a:visited, a:link, a:focus,a:active{
+            text-decoration: none;
+            outline: none;
+        }
+        body, .container, .st-container {
+            width: 100%;
+        }
+        .st-container{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .st-container >a, .st-container > input{
+            width: 20%;
+            height: 34px;
+            position: fixed;
+            bottom: 0;
+        }
+        .st-container > input{
+            opacity: 0;
+            z-index: 1000;
+        }
+        .st-container >a{
+            z-index: 10;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 34px;
+            background-color: #e23a6e;
+            text-align: center;
+            box-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+        }
+
+        #st-ctr-1,#radio-1{
+            left: 0;
+        }
+        #st-ctr-2,#radio-2{
+            left: 20%;
+        }
+        #st-ctr-3,#radio-3{
+            left: 40%;
+        }
+        #st-ctr-4,#radio-4{
+            left: 60%;
+        }
+        #st-ctr-5,#radio-5{
+            left: 80%;
+        }
+        .st-container input:checked + a{
+            color: white;
+        }
+        .st-container input:checked + a:after{
+            content: "";
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            border: 20px solid transparent;
+            border-bottom-color: #e23a6e;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -20px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="st-container">
+        <input type="radio" name="st-raido" checked="checked" id="st-ctr-1">
+        <a href="#radio-1" name="radio-set" id="radio-1">ST-1</a>
+        <input type="radio" name="st-raido" id="st-ctr-2">
+        <a href="#radio-2" name="radio-set" id="radio-2">ST-2</a>
+        <input type="radio" name="st-raido" id="st-ctr-3">
+        <a href="#radio-3" name="radio-set" id="radio-3">ST-3</a>
+        <input type="radio" name="st-raido" id="st-ctr-4">
+        <a href="#radio-4" name="radio-set" id="radio-4">ST-4</a>
+        <input type="radio" name="st-raido" id="st-ctr-5">
+        <a href="#radio-5" name="radio-set" id="radio-5">ST-5</a>
+    </div>
+</div>
+
+
+</body>
+</html>
